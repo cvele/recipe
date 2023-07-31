@@ -13,6 +13,8 @@ func GenerateMealPlanICal(mealPlans []models.MealPlan) (string, error) {
 
 	// Add an event for each meal in the meal plan
 	for _, m := range mealPlans {
+		//needs more details in events
+
 		event := cal.AddEvent(m.Recipe.Title)
 
 		event.SetCreatedTime(m.CreatedAt)
