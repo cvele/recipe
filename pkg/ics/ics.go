@@ -23,8 +23,6 @@ func GenerateMealPlanICal(mealPlans []models.MealPlan) (string, error) {
 		event.SetEndAt(m.MealTime.Add(time.Hour)) // @TODO: for now assuming each meal is an hour long
 
 		event.SetSummary("Meal Plan for Recipe " + fmt.Sprint(m.RecipeID))
-
-		// You can also add a Description with more details about the meal plan
 		event.SetDescription(m.Recipe.Description)
 	}
 
